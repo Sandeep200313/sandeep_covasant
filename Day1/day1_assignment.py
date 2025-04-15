@@ -17,7 +17,6 @@ for key in D1:
         D_INTERSECT[key]=D1[key]
 print(D_INTERSECT)
 
-
 #values are added for same keys
 D_MERGE={}
 for key in D1:
