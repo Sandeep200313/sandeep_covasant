@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 30px; }
+        pre {
+            width: 80%;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-group {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notepad</h1>
+    <pre>{{ content }}</pre>
+
+    <div class="btn-group">
+        <form action="{{ url_for('writetoday') }}" method="get" style="display:inline;">
+            <button type="submit">Update</button>
+        </form>
+        <form action="{{ url_for('dashboard') }}" method="get" style="display:inline;">
+            <button type="submit">Clear</button>
+        </form>
+        <form action="{{ url_for('preview') }}" method="get" style="display:inline;">
+            <button type="submit">Share</button>
+        </form>
+    </div>
+</body>
+</html>
+
